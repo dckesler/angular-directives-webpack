@@ -5,7 +5,9 @@ import uirouter from 'angular-ui-router';
 
 angular.module('dirApp', ['ui.router'])
     .config(config);
-function config($stateProvider){
+function config($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/test');
+
     $stateProvider
 
     .state('testRoute', {

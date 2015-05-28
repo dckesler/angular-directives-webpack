@@ -4495,7 +4495,9 @@
 	var uirouter = _interopRequire(__webpack_require__(5));
 
 	angular.module("dirApp", ["ui.router"]).config(config);
-	function config($stateProvider) {
+	function config($stateProvider, $urlRouterProvider) {
+	    $urlRouterProvider.otherwise("/test");
+
 	    $stateProvider.state("testRoute", {
 	        url: "/test",
 	        template: "<test-route></test-route>",
